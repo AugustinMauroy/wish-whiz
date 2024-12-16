@@ -3,10 +3,28 @@
   "description": "",
   "private": false,
   "version": "0.0.0",
-  "scripts": {},
+  "scripts": {
+    "db:generate": "prisma generate",
+    "db:push": "prisma db push",
+    "db:migrate": "prisma migrate dev",
+    "db:studio": "prisma studio",
+    "db:format": "prisma format",
+    "db:seed-dev": "node --import=\"./node-hooks/typescript.js\" prisma/seed-dev.ts",
+    "db:seed-prod": "node --import=\"./node-hooks/typescript.js\" prisma/seed-prod.ts"
+  },
   "author": "AugustinMauroy",
   "license": "MIT",
   "engines": {
-    "node": ">=v22.0.0"
+    "node": "v22.0.0",
+    "npm": "v10.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "nodejs-loaders": "1.1.0",
+    "prisma": "^6.0.1",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.0.1"
   }
 }

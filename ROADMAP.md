@@ -1,6 +1,6 @@
 # WishWiz Roadmap
 
-- [ ] setup prisma schema
+- [x] setup prisma schema
 - [ ] setup nextjs
 - [ ] setup auth
 - [ ] design unauthed landing page

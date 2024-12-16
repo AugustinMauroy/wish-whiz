@@ -1,0 +1,57 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id      String   @id @default(cuid())
+  email   String   @unique
+  name    String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  WhishLists WhishList[]
+
+  @@index([email, id])
+}
+
+model WhishList {
+  id      String  @id @default(cuid())
+  name    String
+  userId  String
+  private Boolean @default(false)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  User User @relation(fields: [userId], references: [id])
+
+  WhishListItems WhishListItem[]
+
+  @@index([userId, id])
+}
+
+model WhishListItem {
+  id  Int @id @default(autoincrement()) @unique
+  wishListId String
+  name String
+  url  String
+  price Float
+  image String // url of the image
+  purchased Boolean @default(false)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  WhishList WhishList @relation(fields: [wishListId], references: [id])
+
+  @@index([wishListId, id])
+}
