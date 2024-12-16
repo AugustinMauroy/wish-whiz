@@ -1,9 +1,12 @@
 import type { FC, PropsWithChildren } from 'react';
+import AuthProvider from '~/providers/auth';
 import '~/styles/globals.css';
 
 const RootLayout: FC<PropsWithChildren> = ({ children }) => (
 	<html lang="en">
-		<body>{children}</body>
+		<body>
+			<AuthProvider>{children}</AuthProvider>{' '}
+		</body>
 	</html>
 );
 
