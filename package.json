@@ -12,6 +12,7 @@
         "biome:lint": "biome lint --write ./",
         "biome:ci": "biome ci ./",
         "format": "node --run biome:format && node --run biome:lint",
+        "types-check": "tsc --noEmit",
         "db:generate": "prisma generate",
         "db:push": "prisma db push",
         "db:migrate": "prisma migrate dev",
