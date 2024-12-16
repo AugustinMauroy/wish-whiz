@@ -2,6 +2,8 @@
 
 - [x] setup prisma schema
 - [ ] setup nextjs
+- [ ] setup storybook
+- [ ] setup linter and formatter
 - [ ] setup auth
 - [ ] design unauthed landing page
 - [ ] design authed dashboard

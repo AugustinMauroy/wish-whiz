@@ -1,0 +1,1 @@
+globalThis.__RSC_MANIFEST=(globalThis.__RSC_MANIFEST||{});globalThis.__RSC_MANIFEST["/api/route"]={"moduleLoading":{"prefix":"/_next/","crossOrigin":null},"ssrModuleMapping":{},"edgeSSRModuleMapping":{},"clientModules":{},"entryCSSFiles":{"/Users/ecole/Desktop/wish-whiz/":[],"/Users/ecole/Desktop/wish-whiz/app/api/route":[]},"rscModuleMapping":{},"edgeRscModuleMapping":{}}

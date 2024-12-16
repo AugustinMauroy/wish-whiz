@@ -1,5 +1,8 @@
 {
+    "editor.formatOnSave": true,
     "[prisma]": {
         "editor.defaultFormatter": "Prisma.prisma"
     },
+    // use nextjs typescript plugin
+    "typescript.tsdk": "node_modules/typescript/lib"
 }
