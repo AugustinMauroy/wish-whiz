@@ -1,8 +1,8 @@
 # WishWiz Roadmap
 
 - [x] setup prisma schema
-- [ ] setup nextjs
-- [ ] setup storybook
+- [x] setup nextjs
+- [X] setup storybook
 - [ ] setup linter and formatter
 - [ ] setup auth
 - [ ] design unauthed landing page
