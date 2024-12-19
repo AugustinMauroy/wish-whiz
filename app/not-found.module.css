@@ -1,0 +1,23 @@
+.notFound {
+    @apply w-full
+        h-screen
+        text-center
+        flex
+        flex-col
+        gap-4
+        items-center
+        justify-center;
+
+    .icon {
+        @apply size-20;
+    }
+
+    h1 {
+        @apply text-4xl
+            font-bold;
+    }
+
+    p {
+        @apply text-lg;
+    }
+}

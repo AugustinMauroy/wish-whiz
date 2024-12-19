@@ -1,18 +1,15 @@
-'use client';
-import { signIn, signOut, useSession } from 'next-auth/react';
+import { auth } from '~/lib/auth';
 import type { FC } from 'react';
+import Landing from '~/components/Landing';
 
-const Page: FC = () => {
-	const session = useSession();
+const Page: FC = async () => {
+	const session = await auth();
+
+	if (!session) return <Landing />;
 
 	return (
 		<>
 			<pre>{JSON.stringify(session, null, 2)}</pre>
-			{session.status === 'authenticated' ? (
-				<button onClick={() => signOut()}>Sign Out</button>
-			) : (
-				<button onClick={() => signIn()}>Sign In</button>
-			)}
 		</>
 	);
 };

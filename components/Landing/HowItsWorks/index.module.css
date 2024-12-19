@@ -1,0 +1,46 @@
+.number {
+    @apply bg-cyan-600
+        text-white
+        font-bold
+        text-2xl
+        w-8
+        h-8
+        rounded-full
+        flex
+        items-center
+        justify-center;
+}
+
+.howItWorks {
+    @apply py-12
+    w-full
+    flex
+    flex-col
+    justify-center
+    bg-gradient-to-b
+    from-gray-100
+    via-cyan-100
+    to-cyan-200
+    md:py-24
+    lg:py-32
+    xl:py-48
+    dark:from-gray-900
+    dark:via-cyan-900
+    dark:to-cyan-700;
+
+    h2 {
+        @apply text-3xl
+            font-bold
+            text-center;
+    }
+
+    .steps {
+        @apply grid
+            grid-cols-1
+            gap-8
+            mt-8
+            mx-auto
+            md:grid-cols-1
+            lg:grid-cols-4;
+    }
+}

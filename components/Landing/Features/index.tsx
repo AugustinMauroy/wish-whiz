@@ -48,10 +48,17 @@ const FEATURES = [
 const Features: FC = () => (
 	<section id="features" className={styles.features}>
 		<h2>Features</h2>
-		<div>
-			{FEATURES.map(({ title, description }) => (
+		<div className={styles.featuresList}>
+			{FEATURES.map(({ icon, title, description }) => (
 				<CardContainer key={title}>
-					<CardTitle title={title} as="h3" />
+					<CardTitle
+						title={
+							<>
+								{icon} {title}
+							</>
+						}
+						as="h3"
+					/>
 					<p>{description}</p>
 				</CardContainer>
 			))}

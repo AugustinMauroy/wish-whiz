@@ -3,5 +3,5 @@ export const GET = (): Response =>
 		{ message: 'Augustin need a tea' },
 		{
 			status: 418,
-		}
+		},
 	);
