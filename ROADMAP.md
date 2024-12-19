@@ -6,7 +6,11 @@
 - [x] setup linter and formatter
 - [x] setup auth
 - [ ] design unauthed landing page
-- [ ] design authed dashboard
+  - [ ] `LandingHeader`
+     - [ ] style `Header`
+     - [ ] `Avatar` component
+     - [ ] `dropdown` component
+     - [ ] `UserAvatar` component
+- [ ] design landing dashboard
 - [ ] desing signup page
 - [ ] design login page
-- [ ] design landing dashboard

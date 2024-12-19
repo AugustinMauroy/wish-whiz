@@ -1,0 +1,36 @@
+.header {
+    @apply flex
+        justify-between
+        items-center
+        py-5
+        px-10
+        bg-white
+        shadow-md
+        dark:bg-gray-800
+        border-b-2
+        dark:border-gray-700;
+
+    strong {
+        @apply font-semibold;
+    }
+
+    .actions {
+        @apply flex
+            items-center
+            gap-2.5;
+
+        a {
+            @apply text-gray-700
+                transition
+                duration-200
+                dark:text-gray-100
+                rounded
+                px-3
+                py-1
+                hover:bg-cyan-600
+                hover:text-white
+                dark:hover:bg-cyan-400
+                dark:hover:text-black;
+        }
+    }
+}
