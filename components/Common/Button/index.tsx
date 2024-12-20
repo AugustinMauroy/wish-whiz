@@ -20,7 +20,7 @@ const Button: FC<ButtonProps> = forwardRef<HTMLButtonElement, ButtonProps>(
 			asChild = false,
 			...props
 		},
-		ref
+		ref,
 	) => {
 		const Comp = asChild ? Slot : 'button';
 
@@ -31,14 +31,14 @@ const Button: FC<ButtonProps> = forwardRef<HTMLButtonElement, ButtonProps>(
 					styles.button,
 					styles[kind],
 					styles[variant],
-					className
+					className,
 				)}
 				{...props}
 			>
 				{children}
 			</Comp>
 		);
-	}
+	},
 );
 
 Button.displayName = 'Button';

@@ -1,18 +1,36 @@
-'use client';
-import { signIn, signOut, useSession } from 'next-auth/react';
+import { auth } from '~/lib/auth';
+import Landing from '~/components/Landing/index.tsx';
+import Header from '~/components/Sections/Header/index.tsx';
+import UserAvatar from '~/components/Common/UserAvatar/index.tsx';
 import type { FC } from 'react';
 
-const Page: FC = () => {
-	const session = useSession();
+const Page: FC = async () => {
+	const session = await auth();
+
+	if (!session)
+		return (
+			<>
+				<Header
+					actions={[
+						{
+							label: 'Features',
+							href: '#features',
+						},
+						{
+							label: 'How it works',
+							href: '#how-it-works',
+						},
+						<UserAvatar key="avatar" />,
+					]}
+				/>
+				<Landing />
+			</>
+		);
 
 	return (
 		<>
 			<pre>{JSON.stringify(session, null, 2)}</pre>
-			{session.status === 'authenticated' ? (
-				<button onClick={() => signOut()}>Sign Out</button>
-			) : (
-				<button onClick={() => signIn()}>Sign In</button>
-			)}
+			<Header actions={[<UserAvatar key="avatar" />]} />
 		</>
 	);
 };
