@@ -18,6 +18,7 @@ export default {
 	typescript: {
 		ignoreBuildErrors: true,
 	},
+	// We use biomeJS instead of old eslint
 	eslint: {
 		ignoreDuringBuilds: true,
 	},

@@ -1,6 +1,17 @@
 import { withThemeByDataAttribute } from '@storybook/addon-themes';
+import { SessionProvider } from 'next-auth/react';
 import type { Preview, ReactRenderer } from '@storybook/react';
+import type { Session } from 'next-auth';
 import '../styles/globals.css';
+
+const mockSession: Session = {
+	expires: '2023-01-01T00:00:00Z',
+	user: {
+		name: 'AugustinMauroy',
+		email: 'augustin.mauroy@mail.com',
+		image: 'https://avatars.githubusercontent.com/augustinmauroy',
+	},
+};
 
 const preview: Preview = {
 	parameters: {
@@ -19,6 +30,11 @@ const preview: Preview = {
 			defaultTheme: 'light',
 			attributeName: 'data-theme',
 		}),
+		Story => (
+			<SessionProvider session={mockSession}>
+				<Story />
+			</SessionProvider>
+		),
 	],
 };
 
