@@ -11,7 +11,7 @@ const Hero: FC = () => (
 			them with your loved ones for any occasion.
 		</p>
 		<Button asChild>
-			<Link href="/get-started">Get Started</Link>
+			<Link href="/login">Get Started</Link>
 		</Button>
 	</section>
 );
