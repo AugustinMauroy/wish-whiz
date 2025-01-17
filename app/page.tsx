@@ -29,7 +29,6 @@ const Page: FC = async () => {
 
 	return (
 		<>
-			<pre>{JSON.stringify(session, null, 2)}</pre>
 			<Header actions={[<UserAvatar key="avatar" />]} />
 		</>
 	);

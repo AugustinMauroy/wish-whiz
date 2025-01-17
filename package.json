@@ -29,6 +29,7 @@
         "npm": ">=10.0.0"
     },
     "dependencies": {
+        "@auth/prisma-adapter": "^2.7.4",
         "@nodejs-loaders/alias": "^1.1.1",
         "@prisma/client": "~6.0.1",
         "@radix-ui/react-avatar": "~1.1.2",

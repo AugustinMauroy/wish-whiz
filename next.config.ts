@@ -6,9 +6,11 @@ import type { NextConfig } from 'next';
  * This hacky way to set the global dispatcher for undici
  * so if the app is running behind a proxy, it will use the proxy
  */
-if (env.https_proxy) {
+if (env.HTTP_PROXY || env.HTTPS_PROXY) {
+	console.log('Setting up proxy agent in next.config.ts');
 	const dispatcher = new ProxyAgent({
-		uri: new URL(env.https_proxy).toString(),
+		// @ts-expect-error
+		uri: env.HTTPS_PROXY ? new URL(env.HTTPS_PROXY).toString() : new URL(env.HTTP_PROXY).toString(),
 	});
 	setGlobalDispatcher(dispatcher);
 }

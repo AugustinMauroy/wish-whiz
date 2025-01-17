@@ -18,8 +18,7 @@ const Page: FC = () => {
 					Sign in to your account
 				</h1>
 				<p className="text-center text-gray-600 dark:text-gray-200">
-					<strong>Note:</strong> You need to sign in to access this
-					page.
+					Sign in to access your account and continue your journey.
 				</p>
 				{SIGNIN_OPTIONS.map(provider => (
 					<Button
