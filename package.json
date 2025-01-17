@@ -1,6 +1,5 @@
 {
     "name": "wish-whiz",
-    "description": "",
     "private": false,
     "version": "0.0.0",
     "type": "module",
@@ -20,8 +19,8 @@
         "db:migrate": "prisma migrate dev",
         "db:studio": "prisma studio",
         "db:format": "prisma format",
-        "db:seed-dev": "node --import=\"./node-hooks/typescript.js\" prisma/seed-dev.ts",
-        "db:seed-prod": "node --import=\"./node-hooks/typescript.js\" prisma/seed-prod.ts"
+        "db:seed-dev": "node --import=\"./node-hooks/ts-alias.ts\" prisma/seed-dev.ts",
+        "db:seed-prod": "node --import=\"./node-hooks/ts-alias.ts\" prisma/seed-prod.ts"
     },
     "author": "AugustinMauroy",
     "license": "MIT",
@@ -30,6 +29,7 @@
         "npm": ">=10.0.0"
     },
     "dependencies": {
+        "@nodejs-loaders/alias": "^1.1.1",
         "@prisma/client": "~6.0.1",
         "@radix-ui/react-avatar": "~1.1.2",
         "@radix-ui/react-dropdown-menu": "^2.1.4",
@@ -43,18 +43,17 @@
     },
     "devDependencies": {
         "@biomejs/biome": "~1.9.4",
-        "@storybook/addon-a11y": "~8.4.7",
-        "@storybook/addon-essentials": "~8.4.7",
-        "@storybook/addon-interactions": "~8.4.7",
-        "@storybook/addon-links": "~8.4.7",
-        "@storybook/addon-themes": "~8.4.7",
-        "@storybook/nextjs": "~8.4.7",
-        "@storybook/react": "~8.4.7",
-        "@types/node": "~22.10.2",
+        "@storybook/addon-a11y": "~8.5.0",
+        "@storybook/addon-essentials": "~8.5.0",
+        "@storybook/addon-interactions": "~8.5.0",
+        "@storybook/addon-links": "~8.5.0",
+        "@storybook/addon-themes": "~8.5.0",
+        "@storybook/nextjs": "~8.5.0",
+        "@storybook/react": "~8.5.0",
+        "@types/node": "~22.10.7",
         "@types/react": "~19.0.1",
         "@types/react-dom": "~19.0.2",
         "autoprefixer": "~10.4.20",
-        "nodejs-loaders": "1.1.0",
         "postcss": "~8.4.49",
         "prisma": "~6.0.1",
         "tailwindcss": "~3.4.16",
